@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Starff(fullname,email){
+            this.fullname = fullname;
+            this.email = email;
+
+            this.setFullname = function(fullname){
+                this.fullname = fullname;
+            }
+            this.setEmail = function(email){
+                this.email = email;
+            }
+
+            this.getFullname = function(){
+                return fullname;
+            }
+
+            this.getEmail = function(){
+                return email;
+            }
+
+            this.toString = function(){
+                return console.log(`Nhân viên có tên là: ${this.getFullname()} ; Email: ${this.getEmail()} `);
+            }
+        }
+        let starff =new Starff("David","david@gmail.com");
+        starff.setFullname("David Do");
+        starff.setEmail("david.do@gmail.com")
+        starff.toString();
+
+        let staffs = [
+            new Starff("David","david@gmail.com"),
+            new Starff("Cristian","cristian@gmail.com"),
+            new Starff("Micheal","micheal@gmail.com")
+        ]
+        function displayName(){
+            for(let i=0; i< staffs.length; i++){
+                staffs[i].toString();
+            }
+        }
+        displayName();
+    </script>
+</body>
+</html>
